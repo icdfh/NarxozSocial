@@ -1,0 +1,99 @@
+.main{
+    width: 1115px;
+    height: 800px;
+    position: relative;
+    bottom: 820px;
+    left: 200px;
+
+    border-radius: 15px;
+    border: 1px solid #d50032;
+
+}
+.container{
+    left: 50px;
+}
+.links{
+    left: 100px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.settings-info{
+    width: 650px;
+    height: 700px;
+    position: relative;
+    left: 300px;
+    bottom: 280px;
+    border-radius: 15px;
+    border: 1px solid #d50032;
+    box-shadow: 0 4px 4px 2px #00000080;
+}
+.account-info h2{
+    left: 20px;
+}
+.links a{
+    color: black;
+    text-decoration:none;
+}
+.links a:hover{
+
+    color: #d50032;
+    border-radius: 15px;
+}
+.acc-but{
+    position: relative;
+    left: 120px;
+    bottom: 60px;
+}
+.acc-but button{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #D50032;
+    color: white;
+    outline: none;
+    border-color: #D50032;
+    font-size: 17px;
+}
+.acc-but button:hover{
+    background-color: #ffffff;
+    border-color: #D50032;
+    color: black;
+}
+.hr-gor{
+   border-color: #D50032;
+    border-width: 0.5px
+}
+.dis-name{
+    position: relative;
+    left: 45px;
+    bottom: 35px;
+
+}
+.full-name{
+    position: relative;
+    left: 390px;
+    bottom: 108px;
+}
+.custom-input{
+    width: 200px;
+        height: 20px;
+        font-size: 16px;
+}
+.custom-input:hover{
+    border-color: #D50032;
+}
+.custom-input:after{
+ border-color: #D50032;
+}
+.mail{
+    position: relative;
+     left: 45px;
+      bottom: 65px;
+}
+.number{
+    position: relative;
+    left: 390px;
+      bottom: 134px;
+}
+

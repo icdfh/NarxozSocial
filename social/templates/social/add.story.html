@@ -1,0 +1,18 @@
+
+{% extends 'social/base.html' %}
+
+{% block title %}Add Story{% endblock %}
+
+{% block header_content %}
+    <!-- Содержимое для шапки страницы добавления истории -->
+    <h2>Add Story</h2>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Основное содержимое страницы добавления истории -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Story</button>
+    </form>
+{% endblock %}

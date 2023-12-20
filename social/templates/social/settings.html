@@ -1,0 +1,141 @@
+<!-- social/templates/social/settings.html -->
+
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}Settings{% endblock %}
+
+{% block header_content %}
+    <link rel="stylesheet" href="{% static 'social/css/settings.css' %}">
+
+
+{% endblock %}
+
+{% block main_content %}
+    <div class="main">
+        <div class="container">
+            <h1 style="position: relative; left: 30px">Settings</h1>
+        </div>
+        <div class="links">
+            <a href="#" onclick="showContent('account-info')"><h2 style="position: relative; left: 30px">Account</h2></a>
+            <a href="#" onclick="showContent('notifications-info')"><h2 style="position: relative; left: 30px">Notifications</h2></a>
+            <a href="#" onclick="showContent('password-info')"><h2 style="position: relative; left: 30px">Password</h2></a>
+            <a href="#" onclick="showContent('data-export-info')"><h2 style="position: relative; left: 30px">Data Export</h2></a>
+            <a href="#" onclick="showContent('rules-info')"><h2 style="position: relative; left: 30px">Rules</h2></a>
+        </div>
+
+        <div id="main-content" class="settings-info">
+            <!-- Здесь будет отображаться контент для разных окон -->
+            <!-- Начальное содержимое (например, информация об аккаунте) -->
+            <div id="account-info-content">
+                <h2 style="position: relative; left: 30px">Account</h2>
+                    <h2 style="position: relative; left: 40px">Avatar</h2>
+                 <img src="{% static 'social/images/avatarforMarlik.png'%}" style="width: 70px; height: 70px; border-radius:50px; position: relative; left: 35px ">
+                <div class="acc-but">
+                    <button>Upload</button>
+                    <button>Remove</button>
+                    </div>
+                <div class="hr-gor">
+                    <hr style="border-color: #D50032; position: relative; bottom: 40px; width: 570px; border-radius: 0.5px">
+                    </div>
+                <div class="dis-name">
+                <h4 style="margin-bottom: 5px;">Display name</h4>
+                <input class="custom-input">
+                      </div>
+                <div class="full-name">
+                     <h4 style="margin-bottom: 5px;">Full name</h4>
+                <input  class="custom-input">
+                </div>
+                <hr style="border-color: #D50032; position: relative; bottom: 80px; width: 570px; border-radius: 0.5px">
+                     <div class="mail">
+                <h4 style="margin-bottom: 5px;">Email address</h4>
+                <input class="custom-input">
+                      </div>
+                <div class="number">
+                     <h4 style="margin-bottom: 5px;">Phone number</h4>
+                <input  class="custom-input">
+                </div>
+                 <hr style="border-color: #D50032; position: relative; bottom: 105px; width: 570px; border-radius: 0.5px">
+                <div>
+                <h3 style="color: black; position: relative;  left: 37px; bottom: 80px">Linked Accounts</h3>
+                    <img src="{% static 'social/icons/narxoz-mobile.png'%}" style="position: relative; left: 45px; bottom: 60px">
+                        <h4 style="color: #989898; position: relative;  left: 110px; bottom: 120px">Sign in ur narxoz mobile account</h4>
+                    <button class=""
+                            style="
+
+    position: relative; left: 500px; bottom: 175px;  border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #D50032;
+    color: white;
+    outline: none;
+    border-color: #D50032;
+    font-size: 17px;">Connect
+                    </button>
+
+                    </div>
+                 <hr style="border-color: #D50032; position: relative; bottom: 135px; width: 570px; border-radius: 0.5px">
+
+                <a href="#"><h3 style="color: black; position: relative;bottom: 125px; left: 35px; cursor: pointer">Delete account</h3></a>
+                <h4 style="color: #989898;position: relative;bottom: 135px; left: 47px ">if you delete your account all your data will be erased</h4>
+                <button style="position: relative; left: 500px; bottom: 205px;  border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #D50032;
+    color: white;
+    outline: none;
+    border-color: #D50032;
+    font-size: 17px;">Save</button>
+            </div>
+        </div>
+    </div>
+
+     <script>
+        // Функция для отображения контента
+        function showContent(contentId) {
+            loadContent("{% url 'settings_info' %}?content=" + contentId);
+        }
+
+        // Функция для загрузки контента с сервера
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("main-content").innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Проверяем, что DOM полностью загружен, перед привязкой событий
+        document.addEventListener('DOMContentLoaded', function () {
+            // Присвойте событие click каждой ссылке
+            document.getElementById("account-info-link").addEventListener("click", function (event) {
+                event.preventDefault();
+                showContent('account-info');
+            });
+
+            document.getElementById("notifications-info-link").addEventListener("click", function (event) {
+                event.preventDefault();
+                showContent('notifications-info');
+            });
+
+            document.getElementById("password-info-link").addEventListener("click", function (event) {
+                event.preventDefault();
+                showContent('password-info');
+            });
+
+            document.getElementById("data-export-info-link").addEventListener("click", function (event) {
+                event.preventDefault();
+                showContent('data-export-info');
+            });
+
+            document.getElementById("rules-info-link").addEventListener("click", function (event) {
+                event.preventDefault();
+                showContent('rules-info');
+            });
+        });
+    </script>
+{% endblock %}

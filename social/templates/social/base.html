@@ -1,0 +1,136 @@
+<!-- base.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'social/css/base.css' %}">
+    <title>{% block title %}My Social App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Общая часть шапки -->
+            <div class="vertical-left-side">
+                <div class="logo-container">
+                    <img src="{% static 'social/images/logo.png' %}" width="150px" alt="Logo">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main' %}"><img src="{% static 'social/icons/home1.png' %}" alt="Home"></a></li>
+                        <li><a href="{% url 'friends' %}"><img src="{% static 'social/icons/friends.png' %}" alt="Friends"></a></li>
+                        <li><a href="{% url 'add' %}"><img src="{% static 'social/icons/add.png' %}" alt="Add"></a></li>
+                        <li><a href="{% url 'chat' %}"><img src="{% static 'social/icons/chats.png' %}" alt="Chats"></a></li>
+                        <li><a href="{% url 'settings' %}"><img src="{% static 'social/icons/settings.png' %}" alt="Settings"></a></li>
+                        <li class="logout"><a href="{% url 'logout' %}"><img src="{% static 'social/icons/logout.png' %}" alt="Logout"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="regtangle">
+                <div class="profile-page">
+                    <div class="profile-bar">
+                         {% if user_profile.image %}
+        <img src="{{ user_profile.image.url }}" alt="Avatar">
+    {% else %}
+        <!-- Если изображение отсутствует, можете отобразить другой значок или ничего -->
+        <img src="{% static 'social/images/defavatar.jpg' %}" alt="Default Avatar">
+    {% endif %}
+                        <div class="profile-login">
+                           <h2>{{ user_profile.full_name }}</h2>
+                           <h3>{{ request.user.username }}</h3>
+                            <h3>S22014533</h3>
+                       </div>
+                    </div>
+                    <div class="profile-details">
+                        <ul>
+                            <li><a href="#"><img class="details-img" src="{% static 'social/icons/detailsbut.png' %}" alt="Details"></a></li>
+                        </ul>
+                    </div>
+                    <div class="profile-content" id="profile-content">
+                        <div class="profile">
+                            <h1>Profile</h1>
+                            <a href="#" id="posts-link">Posts</a>
+                            <a href="#" id="groups-link">Groups</a>
+                            <a href="#" id="friends-link">Friends</a>
+                            <a href="#" id="activity-link">Activity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="search-bar">
+                    <img src="{% static 'social/icons/search.png' %}" alt="Search Icon">
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="just-icons">
+                    <li><a href="#"><img src="{% static 'social/icons/calendar.png' %}" alt="Settings"></a></li>
+                    <li id="notification-icon"><a href="#"><img src="{% static 'social/icons/notification.png' %}" alt="Settings"></a></li>
+                </div>
+
+                {% block header_content %}{% endblock %}
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        {% block main_content %}{% endblock %}
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const postsLink = document.getElementById("posts-link");
+            const groupsLink = document.getElementById("groups-link");
+            const friendsLink = document.getElementById("friends-link");
+            const activityLink = document.getElementById("activity-link");
+            const profileContent = document.getElementById("profile-content");
+            const notificationIcon = document.getElementById("notification-icon");
+            const notificationPopup = document.getElementById("notification-popup");
+            const closeNotification = document.getElementById("close-notification");
+
+            function loadContent(url) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        profileContent.innerHTML = data;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            postsLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                loadContent("{% url 'posts' %}");
+            });
+
+            groupsLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                loadContent("{% url 'groups' %}");
+            });
+
+            friendsLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                loadContent("{% url 'profile_friends' %}");
+            });
+
+            activityLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                loadContent("{% url 'activity' %}");
+            });
+
+            notificationIcon.addEventListener("click", function () {
+                notificationPopup.style.display = "block";
+            });
+
+            closeNotification.addEventListener("click", function () {
+                notificationPopup.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

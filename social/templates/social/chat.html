@@ -1,0 +1,39 @@
+<!-- social/templates/social/main_page.html -->
+
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}Friends{% endblock %}
+
+{% block header_content %}
+    <link rel="stylesheet" href="{% static 'social/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'social/css/chat.css' %}">
+     <div class="main">
+            <div class="container">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" class="avatar" style="width: 60px;height: 60px;border-radius: 50px">
+
+              <hr>
+            </div>
+                <hr class="vertical">
+        </div>
+        <hr>
+
+    <!-- Добавьте следующую строку для подключения вашего JavaScript-файла -->
+    <script src="{% static 'social/js/messenger.js' %}"></script>
+
+    {% block main_content %}
+        <!-- Остальной контент главной страницы -->
+
+    {% endblock %}
+{% endblock %}
+
+
+

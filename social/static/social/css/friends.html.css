@@ -1,0 +1,124 @@
+.main{
+    width: 1115px;
+    height: 800px;
+    position: relative;
+    bottom: 820px;
+    left: 200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #d50032;
+
+}
+
+.main img{
+    list-style-type: none;
+}
+.links h3{
+    color: black;
+    position: relative;
+    right: 20px;
+    margin: 65px;
+}
+.links h3:hover{
+    background-color: #d50032;
+    height: 27px;
+
+    color: white;
+    border-radius: 15px;
+}
+
+.container ul{
+    list-style-type: none;
+}
+.links{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: 30px;
+    top: -40px;
+    bottom: 100px;
+    cursor: pointer;
+}
+
+.links a{
+    text-decoration: none;
+
+}
+
+.links-but{
+    width: 127px;
+    height: 40px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    background-color: #d50032;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer
+}
+.container{
+    border-bottom: #d50032;
+}
+
+.links-2{
+    display: flex;
+    position: relative;
+    bottom: 130px;
+    left: 13px;
+    margin: 0;
+}
+.links-2 h3{
+    color: black;
+    padding: 45px;
+    margin: 20px;
+}
+
+.container-3 img{
+    position: relative;
+    left: 67px;
+    bottom: 145px;
+}
+.profile-info{
+    position: relative;
+    left: 140px;
+    bottom: 215px;
+}
+.profile-links li{
+    display: flex;
+    justify-content: normal;
+    position: relative;
+    left: 950px;
+    bottom: 150px;
+}
+.friends-search{
+   display: flex;
+    align-items: center;
+    border: 2px solid #E9E9E9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #E9E9E9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    right: 20px;
+}
+.friends-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000000;
+    margin-left: 10px;
+    width: 1000px;
+    height: 100px;
+    font-size: 20px;
+}
+.search-mini{
+    display: flex;
+    align-items: center;
+
+
+}
+
+

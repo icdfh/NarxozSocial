@@ -1,0 +1,314 @@
+html{
+    font-family: Arial, serif;
+}
+body {
+    overflow-y: hidden;
+    overflow-block: hidden;
+    overflow-x: hidden;
+    height: 98vh;
+}
+.vertical-left-side {
+    width: 252px; /* Увеличьте ширину по вашему желанию */
+    height: 98vh;
+    background: #D50032;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #D50032;
+}
+
+.logo-container img {
+    max-width: 100%; /* Чтобы логотип подстраивался под ширину */
+}
+.logo-container {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+nav {
+    background-color: #D50032;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 110px;
+}
+
+nav ul li {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a img {
+    margin-right: 45px;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 20px; /* Расстояние между левым боковым меню и основным контентом */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E9E9E9;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #E9E9E9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 55px;
+    left: 450px;
+
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000000;
+    margin-left: 10px;
+    width: 550px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.search-bar img {
+    width: 25px;
+    margin-right: 10px;
+}
+body {
+    overflow-y: hidden;
+}
+.vertical-left-side {
+    width: 200px; /* Увеличьте ширину по вашему желанию */
+    height: 98vh;
+    background: #D50032;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #D50032;
+}
+
+.logo-container img {
+    max-width: 100%; /* Чтобы логотип подстраивался под ширину */
+}
+.logo-container {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+nav {
+    background-color: #D50032;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 110px;
+}
+
+nav ul li {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a img {
+    margin-right: 45px;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 20px; /* Расстояние между левым боковым меню и основным контентом */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E9E9E9;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #E9E9E9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 55px;
+    left: 450px;
+
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000000;
+    margin-left: 10px;
+    width: 550px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.search-bar img {
+    width: 25px;
+    margin-right: 10px;
+}
+.just-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Это сделает блок .just-icons расположенным справа от .search-bar */
+    position: absolute;
+    left: 1100px;
+    top: 65px;
+    list-style-type:none;
+
+}
+
+.just-icons a {
+    margin-left: 10px; /* Расстояние между иконками */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.just-icons img {
+    width: 35px; /* Вы можете регулировать ширину иконок по вашему усмотрению */
+}
+.regtangle{
+    position: absolute;
+    width: 1700px;
+    height: 98vh;
+    top: 9px;
+    left: 208px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #d50032;
+}
+.profile-page{
+    position: absolute;
+    width: 560px;
+    height: 98vh;
+    top: 0;
+    left: 1150px;
+    background-color: #d50032;
+    border-radius: 25px;
+}
+.profile{
+    position: absolute;
+    width: 541px;
+    height: 730px;
+    top: 210px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px 2px #00000080
+}
+.profile h1{
+    margin-left: 54px;
+}
+.profile a{
+    margin-left: 45px;
+    text-decoration: none;
+    color: #989898;
+    font-size: 20px;
+    padding: 10px;
+}
+.profile a:hover{
+    color: #d50032;
+}
+.profile-bar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    position: relative;
+    left: 30px;
+    top: 50px;
+}
+.profile-bar img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+}
+.profile-login{
+    position: relative;
+    left: 130px;
+    bottom: 110px;
+    padding: 0;
+}
+.profile-login h2,h3{
+    color: white;
+    padding: 0;
+    margin: 10px;
+}
+.profile-login h2{
+    font-size: 20px;
+}
+.profile-details{
+    position: relative;
+    bottom: 130px;
+    left: 460px;
+    width: 20px;
+    height: 20px;
+    list-style-type:none;
+}
+.profile-details ul{
+    list-style-type: none;
+}
+.search-container2{
+    position: relative;
+    left: 870px;
+    bottom: 219px;
+}
+.notification-popup{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 50px;
+}

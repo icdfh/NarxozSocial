@@ -1,0 +1,64 @@
+<!-- social/templates/social/main_page.html -->
+
+{% extends 'social/base.html' %}
+
+{% load static %}
+
+{% block title %}Friends{% endblock %}
+
+{% block header_content %}
+    <link rel="stylesheet" href="{% static 'social/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'social/css/friends.html.css' %}">
+
+    {% block main_content %}
+
+        <!-- Остальной контент главной страницы -->
+        <div class="main">
+            <div class="container">
+                <ul>
+                     <li><a href="#"><img src="{% static 'social/icons/logo-friends.png' %}" alt="Home"></a></li>
+                </ul>
+              <h2>Friends</h2>
+
+                <div class="links">
+                <a href="#"><h3>Online 0</h3></a>
+                <a href="#"><h3>All 8</h3></a>
+                 <a href="#"><h3>Pending 0</h3></a>
+                <a href="#"><h3>Blocked 0</h3></a>
+                    </div>
+                <button class="links-but">Add Friend </button>
+
+            </div>
+        <hr style="border-color: #d50032; position: relative; top: -90px; border-width: 0.5px">
+            <div class="container-2">
+                 <hr style="border-color: #d50032; position: relative; top: 5px; border-width: 0.5px; width: 970px">
+                <div class="links-2">
+                <h3>ALL FRIENDS - 8 </h3>
+                <h3>NAME</h3>
+                <h3>LOGIN</h3>
+                    </div>
+                <div class="search-container2">
+                    <div class="search-mini">
+                <input class="friends-search" type="search" placeholder="Search...">
+                        </div>
+                    </div>
+            </div>
+            <div class="container-3">
+                <img src="{% static 'social/images/avatarforMarlik.png'%}" style="width: 70px; height: 70px; border-radius:50px ">
+                <div class="profile-info">
+                <h3 style="color: black; position: relative; ;">icdfh</h3>
+                <h4 style="color: #989898; position: relative; bottom: 15px;left: 9px">Offline</h4>
+                </div>
+                <div class="profile-links">
+                     <li><a href="#"><img src="{% static 'social/icons/friendschats.png' %}" style="position: relative; left: -5px; bottom: 140px"  alt="Chats"></a></li>
+                     <li><a href="#"><img src="{% static 'social/icons/friendsmore.png' %}" style="position: relative;  bottom: 173px" alt="Chats"></a></li>
+                    <hr style="border-color: #d50032; position: relative; bottom: 280px; border-width: 0.5px; width: 970px">
+                </div>
+
+            </div>
+
+
+
+        </div>
+    {% endblock %}
+{% endblock %}

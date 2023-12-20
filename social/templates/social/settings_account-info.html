@@ -1,0 +1,36 @@
+<div id="account-info-content">
+    <h2 style="position: relative; left: 30px">Account</h2>
+
+    <!-- Форма для обновления данных пользователя и профиля -->
+    <form method="post" enctype="multipart/form-data" action="{% url 'settings_info' %}">
+        {% csrf_token %}
+
+        <!-- Форма для данных пользователя -->
+        {{ user_form.first_name.label_tag }}
+        {{ user_form.first_name }}
+        {{ user_form.last_name.label_tag }}
+        {{ user_form.last_name }}
+
+        <!-- Форма для данных профиля -->
+        {{ profile_form.full_name.label_tag }}
+        {{ profile_form.full_name }}
+        {{ profile_form.email.label_tag }}
+        {{ profile_form.email }}
+        {{ profile_form.phone_number.label_tag }}
+        {{ profile_form.phone_number }}
+        {{ profile_form.image.label_tag }}
+        {{ profile_form.image }}
+
+   <form method="post" enctype="multipart/form-data" action="{% url 'settings_info' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+    </form>
+ <!-- Форма для удаления аккаунта -->
+    <form method="post" action="{% url 'delete_account' %}">
+        {% csrf_token %}
+        <button type="submit" style="color: red;">Delete Account</button>
+    </form>
+
+</div>

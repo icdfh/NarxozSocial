@@ -1,0 +1,150 @@
+/* Стили для контейнера регистрации */
+/* Стили для контейнера регистрации */
+.registration-container {
+    background-color: #D50032;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 1px solid #D50032;
+    margin-top: 200px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени: горизонтальное смещение, вертикальное смещение, размытие и цвет */
+}
+
+/* Стили для логотипа в контейнере регистрации */
+.registration-container img {
+    width: 140px; /* Задайте ширину логотипа по вашему усмотрению */
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Стили для формы регистрации */
+.registration-form {
+    max-width: 300px; /* Уменьшил максимальную ширину формы */
+    margin: 0 auto; /* Выравнивание по центру */
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.form-group input::placeholder {
+    color: #000000; /* Цвет текста placeholder'а */
+    opacity: 0.7; /* Прозрачность текста placeholder'а */
+}
+
+.form-group input {
+    width: 100%; /* Занимать 100% ширины контейнера */
+    padding: 10px;
+    border: 1px solid #ccc; /* Граничная линия */
+    border-radius: 25px; /* Скругленные углы */
+    color: #000; /* Изменено на черный цвет текста */
+    font-size: 15px;
+}
+
+/* Стили для кнопки в форме регистрации */
+.registration-form button {
+    padding: 10px;
+    background-color: #ffffff; /* Цвет фона кнопки */
+    color: #D50032; /* Цвет текста кнопки */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 322px;
+    margin-top:40px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+/* social/css/register.css */
+
+/* Стили для кнопок "Sign Up" и "Sign In" */
+.button-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button-group a {
+    padding: 25px;
+    color: #ffffff; /* Цвет текста */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+    text-decoration: none; /* Убираем стандартное подчеркивание ссылок */
+}
+
+/* Стили для активной ссылки */
+.button-group a.active {
+    border-bottom: 3px solid #ffffff; /* Белая полоска снизу */
+}
+
+/* social/css/login.css */
+/* ... (остальные стили) */
+
+.registration-form a {
+    display: block;
+    margin-top: 50px; /* Расстояние между кнопкой и ссылкой */
+    color: #DFC0C0; /* Цвет ссылки */
+    text-decoration: none;
+
+}
+
+.registration-form a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 16px; /* Новая строка для добавления отступа сверху */
+}
+
+.checkbox-group input[type="checkbox"] {
+    opacity: 0; /* Делаем чекбокс прозрачным */
+    position: absolute;
+    margin-top: -2px; /* Новая строка для поднятия чекбокса немного выше */
+
+}
+
+.checkbox-group label {
+    color: #ffffff;
+    margin-left: 10px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 15px; /* Добавляем выравнивание высоты строки */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    font-weight: lighter;
+}
+
+.checkbox-group label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label:before {
+    content: '\2713';
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+}
