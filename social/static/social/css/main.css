@@ -10,6 +10,7 @@
      overflow-y: auto; /* Добавляем вертикальную прокрутку, если контент выходит за пределы блока */
     max-height: 800px; /* Задаем максимальную высоту блока, чтобы он не рос бесконечно, и прокрутка стала активной */
     overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    width: 1100px;
 
 
 
@@ -55,12 +56,13 @@
     color: #989898;
 }
 
-.club{
+.clubs{
 display: flex;
 
     flex-direction: row;
 
     justify-content: flex-start;
+    width: 1200px;
 }
 .club-1{
     width: 370px;
@@ -104,6 +106,49 @@ display: flex;
     cursor: pointer
 
 }
+.club-2{
+    width: 370px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 10px;
+
+}
+.club-2 img{
+    width: 150px;
+    border-radius: 10px;
+    margin: 15px;
+}
+.img-ellips img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    position: relative;
+    left:125px;
+    bottom: 80px
+}
+.club-2 h2{
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+.club-2 button{
+    position: relative;
+    bottom: 130px;
+    left: 300px;
+    border-radius: 10px;
+    border-color: #d50032;
+    background: #D50032;
+    color: white;
+    width: 53px;
+    height: 20px;
+    text-align: center;
+    border-style: solid;
+    cursor: pointer
+
+}
+
 .pag-1{
     border-radius: 50px;
     border-color: #d50032;

@@ -198,3 +198,4 @@ def delete_account(request):
 def profile(request):
     user_profile = request.user.userprofile  # предполагаем, что у пользователя есть ассоциированный профиль
     return render(request, 'social/profile.html', {'user_profile': user_profile})
+
